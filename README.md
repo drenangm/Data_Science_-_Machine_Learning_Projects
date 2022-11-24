@@ -37,10 +37,10 @@ Tambem existe um arquivo “__init__.py” completamente vazio, indicando que es
 Temos tambem os arquivos dashboard_git, overview_git e settings_git que contem os modulos em python com scripts para cada uma das tres paginas que farao parte da aplicacao.
 
 
-Na nossa aplicacao nao existem arquivos html e css, quem ira construir a aplicacao sera o Dash. Iremos abrir funcoes desenvolvidas em Python, iremos indicar o que queremos e na hora em que executar o programa o Dash monta as paginas html e compoe a aplicacao.
+Na nossa aplicacao nao existem arquivos html e css, quem ira construir a aplicacao sera o Dash. Iremos abrir funcoes desenvolvidas em Python, iremos indicar o que queremos e na hora em que executar o programa o Dash monta as paginas html que compõem a aplicacao.
 
 
-Temos o arquivo [app_git.py](http://app_git.py) para fazer a execucao da aplicacao e o [dataapp_git.py](http://dataapp_git.py) que eh o ponto de partida. A partir dele chamamos os demais modulos e assim a aplicacao eh executada.
+Temos o arquivo [app_git.py](http://app_git.py) para fazer a execucao da aplicacao e o [dataapp_git.py](http://dataapp_git.py) que é o ponto de partida. A partir dele chamamos os demais modulos e assim a aplicacao é executada.
 
 
 Faremos uma execucao previa do dashboard para nos familiarizarmos com as funcionalidades que ele ira fornecer:
@@ -67,7 +67,7 @@ Aplicacao em funcionamento no endereco http://127.0.0.1:3000/:
 
 ![image](https://user-images.githubusercontent.com/79231882/203081790-90b5be8d-e55d-4c12-a497-3d105381e51a.png)
 
-No menu lateral a esquerda ao acessarmos a pagina de help, eh retornado um erro:
+No menu lateral a esquerda ao acessarmos a pagina de help, é retornado um erro:
 ![image](https://user-images.githubusercontent.com/79231882/203081900-2aa5aa96-d38d-4579-8e15-52147a783f9f.png)
 
 
@@ -102,7 +102,7 @@ Em configuracoes podemos mudar o formato de Data e mudar o Titulo da Coluna:
 ![image](https://user-images.githubusercontent.com/79231882/203082505-7498a360-77a4-4863-b8ba-d00de3da5442.png)
 
 
-Se alterarmos o “Mapeado Para” para um nome de coluna de nossa preferencia, o arquivo JSON que possibilita esta edicao eh alterado, guardando a mudanca e sua correspondencia com o dataset de origem. 
+Se alterarmos o “Mapeado Para” para um nome de coluna de nossa preferencia, o arquivo JSON que possibilita esta edicao é alterado, guardando a mudanca e sua correspondencia com o dataset de origem. 
 
 
 Vamos comecar a construir o dataapp_git.py. 
@@ -132,7 +132,7 @@ Em cada uma das paginas chamaremos a funcao modularizada get_layout (associada a
 
 Dentro do diretorio temos desenvolvidas as três paginas, em cada um destes modulos das paginas temos uma funcao get_layout
 
-Vemos que o help esta dentro do laço “else” que nao esta desenvolvido. Ele sera tratado com codigo HTML.  Usamos H1 para o titulo, Hr para a linha e o P para o paragrafo.
+Vemos que o help esta dentro do laço “else” que nao esta desenvolvido. Ele sera tratado com codigo HTML. Usamos H1 para o titulo, Hr para a linha e o P para o paragrafo.
 
 ![image](https://user-images.githubusercontent.com/79231882/203083436-c236691e-0957-414b-991a-2e44faf6029c.png)
 
@@ -142,10 +142,9 @@ Criamos o executor da aplicacao com o host alterado para o endereço que funcion
 
 
 
-
 Vamos agora construir o modulo app (no meu caso, app_git).
 
-Importamos o dash, criamos uma instancia do dash, chamada de app, colocamos o parametros necessarios para que o layout do aplicativo possa ser responsivo.
+Importamos o dash, criamos uma instância do dash, chamada de app, colocamos o parametros necessarios para que o layout do aplicativo possa ser responsivo.
 
 ![image](https://user-images.githubusercontent.com/79231882/203083643-c5541017-917c-4df2-8c09-6be8b95d9f2d.png)
 
@@ -161,9 +160,9 @@ Vamos construir a pagina dashboard:
 
 → traceback: formata mensagem de erro via HTTP
 
-Vamos criar uma funcao get_layout, que eh chamada la no dataapp.
+Vamos criar uma funcao get_layout, que é chamada la no dataapp.
 
-Inicialmente vamos tentar executar a funcao (laco “try”), se ocorrer um erro formatamos o erro com o modulo Jumbotron e mostramos ao usuario.
+Inicialmente vamos tentar executar a funcao (laço “try”), se ocorrer um erro formatamos o erro com o modulo Jumbotron e mostramos ao usuario.
 
 → Carregamos os dados com o modulo data.operations;
 
@@ -333,7 +332,7 @@ Este arquivo eh o que sera carregado na pagina de configuracoes do dashboard:
 ![image](https://user-images.githubusercontent.com/79231882/203086482-17181b3d-787b-4e02-968a-219d3faaba1e.png)
 
 
-É aqui que oferecemos ao usaurio a opcao de alterar os nomes das colunas para que ele possa visualizar a informacao de forma mais amigavel.
+É aqui que oferecemos ao usuario a opcao de alterar os nomes das colunas para que ele possa visualizar a informacao de forma mais amigavel.
 
 Vamos olhar o arquivo com os dados dentro do diretorio dataset:
 ![image](https://user-images.githubusercontent.com/79231882/203086612-366b17bb-2d95-499d-a9ff-6417c02c3a78.png)
@@ -344,7 +343,7 @@ Nos carregamos estes dados e, apos isso, agrupamos eles.
 ![image](https://user-images.githubusercontent.com/79231882/203086671-af09e3b1-f0c1-4b74-bf11-c490a1bce117.png)
 
 
-Em caso de alteracao deste dataset, todo mapeamento precisara sera alterado para que as mudancas possam ser refletidas no dashboard.
+Em caso de alteracao deste dataset, todo mapeamento precisará ser alterado para que as mudancas possam ser refletidas no dashboard.
 
 Vamos checar em assets, quais arquivos estamos utilizando.
 
@@ -355,7 +354,7 @@ Os arquivos com css:
 ![image](https://user-images.githubusercontent.com/79231882/203086835-29ac1964-229d-4cfc-9c47-b5e4be0cae8a.png)
 
 
-Este é um arquivo open source disponibilizado pela equipe do twitter que nos permite ter um dicionario em CSS. NAo precisamos criar, apenas utilizamos como um dicionario padrao. 
+Este é um arquivo open source disponibilizado pela equipe do twitter que nos permite ter um dicionario em CSS. Não precisamos criar, apenas utilizamos como um dicionario padrao. 
 
 Em cima dele, construimos nosso arquivo CSS com o arquivo custom.styles.css
 
@@ -423,7 +422,7 @@ No Power BI tambem precisariamos carregar os dados, limpar colunas, ajustar a co
 
 2- O Power BI permite que seja criado um dashboard com o Power BI desktop, somente em ambiente Windows. Em outros OS ele nao funciona. Com Python nao temos esta restricao. 
 
-3- O Power BI desktop eh gratuito mas para publicacao online ele eh pago, ficariamos restritos ha uso apenas local, limitando a integracao e publicacao da analise. 
+3- O Power BI desktop eh gratuito mas para publicacao online ele é pago, ficariamos restritos ha uso apenas local, limitando a integracao e publicacao da analise. 
 
 Com o dash pegariamos o dashboard desenvolvido, subiriamos ele para um servico de cloud, inicializariamos a app (poderiamos ate criar um sistema de autenticacao) e ele estaria pronto para acesso de outras pessoas. Nao ha custo adicional de licenca.
 
