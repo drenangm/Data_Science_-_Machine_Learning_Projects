@@ -1,8 +1,9 @@
-# data_app_dashboard_interativo_chamada_suporte
+# Explicação sobre como foi construído o dashboard
+
 Este projeto usaremos o Dash, que juntamente como o framework Flask permitirá construir um Dashboard Interativo 100% via web.  Os dados usados neste projeto são fictícios, mas representam exemplos de chamados de suporte. Os dados podem ser coletados de sistemas de atendimento de suporte.
 
 
-Sera usado o Dash para construcao da app.
+O dashboard foi construído fazendo uso da biblioteca Dash e foi implementada por meio da construcao de um app.
 
 Utilizaremos tambem a extensao dash bootstrap components.
 
@@ -13,7 +14,8 @@ Alem de outras caracteristicas, permitira que possamos alterar o tamanho da pagi
 
 ![image](https://user-images.githubusercontent.com/79231882/203079078-77c1256c-86a4-4960-b4e1-e485cedb3ebd.png)
 
-Os arquivos bootstrap e custom.styles contem alguns arquivos em CSS quye serao colocados na aplicacao.
+
+Os arquivos bootstrap e custom.styles contem alguns arquivos em CSS que serao colocados na aplicacao.
 
 
 O arquivo JSON mapeamento_campos_dataset serve para fazer o mapeamento entre os nomes das colunas do arquivo de dados e os nomes das colunas na nossa aplicacao no dashboard.
@@ -22,16 +24,21 @@ Isso sera feito porque queremos oferecer ao usuario do dashboard a oportunidade 
 
 Por exemplo: existe uma coluna chamada “data_criacao” em que o usuario nao deseja utilizar este nome, ele prefere utilizar “data_abertura”. Com isso permitimos que o usuario possa fazer este tipo de alteracao.
 
+
 O conjunto de dados esta no arquivo dataset (dados ficticios).
+
 
 Os arquivos app_element_git, constant_git, data_operations_git e navbar_git foram desenvolvidos em Python e contem barra de navegacao, operacoes de dados, arquivo com algumas constantes (alguns termos nao serao alterados na aplicacao, servindo como uma especie de dicionario) e mais um arquivo com elementos da app.
 
-Tambem existe um arquivo “__init__.py” completamente vazio, indicando que esta pasta eh um modulo Python, ou um pacote Python com uma serie de funcoes modularizadas.
+
+Tambem existe um arquivo “__init__.py” completamente vazio, indicando que esta pasta é um modulo Python, ou um pacote Python com uma serie de funcoes modularizadas.
 
 
 Temos tambem os arquivos dashboard_git, overview_git e settings_git que contem os modulos em python com scripts para cada uma das tres paginas que farao parte da aplicacao.
 
+
 Na nossa aplicacao nao existem arquivos html e css, quem ira construir a aplicacao sera o Dash. Iremos abrir funcoes desenvolvidas em Python, iremos indicar o que queremos e na hora em que executar o programa o Dash monta as paginas html e compoe a aplicacao.
+
 
 Temos o arquivo [app_git.py](http://app_git.py) para fazer a execucao da aplicacao e o [dataapp_git.py](http://dataapp_git.py) que eh o ponto de partida. A partir dele chamamos os demais modulos e assim a aplicacao eh executada.
 
@@ -39,12 +46,16 @@ Temos o arquivo [app_git.py](http://app_git.py) para fazer a execucao da aplicac
 Faremos uma execucao previa do dashboard para nos familiarizarmos com as funcionalidades que ele ira fornecer:
 ![image](https://user-images.githubusercontent.com/79231882/203081147-0d4d4489-3d5f-4eb6-a8bd-3d157e48e9f9.png)
 
+
 Copiamos o endereco fornecido pela aplicacao:
 [http://0.0.0.0:3000/](http://0.0.0.0:3000/)
 
+
 A aplicacao na funcionou no endereco indicado pela aplicacao> este endereco foi inserido dentro de um parametro da funcao run_server, parametro host.
 
+
 Iremos editar para o endereco 127.0.0.1 e ver se funciona.
+
 
 ![image](https://user-images.githubusercontent.com/79231882/203081277-fdfd9e33-9c6a-4d17-a24a-3b9efb7aa3cb.png)
 
@@ -59,11 +70,15 @@ Aplicacao em funcionamento no endereco http://127.0.0.1:3000/:
 No menu lateral a esquerda ao acessarmos a pagina de help, eh retornado um erro:
 ![image](https://user-images.githubusercontent.com/79231882/203081900-2aa5aa96-d38d-4579-8e15-52147a783f9f.png)
 
-Eh desta forma que a app foi desenvolvida, nao ha problema aqui, isso faz parte da app. A apgina de help nao foi desenvolvida.
+
+É desta forma que a app foi desenvolvida, nao ha problema aqui, isso faz parte da app. A apgina de help nao foi desenvolvida.
+
 
 Nas legendas laterais do grafico de Chamados de Suporte podemos fazer a selecao das opcoes que queremos que aparecam no grafico:
 
+
 ![image](https://user-images.githubusercontent.com/79231882/203082002-9dad4701-2203-4e3c-81a7-5ee0f53be93c.png)
+
 
 No caso, selecionamos apenas as 3 primeiras.
 
@@ -74,7 +89,7 @@ O mesmo pode ser feito para os graficos de rosca e de pizza abaixo:
 
 ![image](https://user-images.githubusercontent.com/79231882/203082156-cd781b31-038f-4641-a8b0-544cdb26ca0a.png)
 
-Em Visao Geral podemos tambem fazer selecoes. Abaixo fizemos selecao de chamados do colaborador 68:
+Em Visao Geral podemos tambem fazer seleçõess. Abaixo fizemos seleção de chamados do colaborador 68:
 
 ![image](https://user-images.githubusercontent.com/79231882/203082288-b3aca0a3-2dfa-4db7-9cdc-a08846ee9d66.png)
 
@@ -99,11 +114,12 @@ Comecaremos com as bibliotecas que iremos utilizar.
 Em seguida fazemos a leitura dos arquivos de configuracao das constantes:
 ![image](https://user-images.githubusercontent.com/79231882/203082851-dd8a524a-742c-4abf-b94e-1469acf47598.png)
 
-Aqui trazemos tudo que nao sera alterado ao longo da execucao da aplicacao.
+Aqui trazemos tudo que nao sera alterado ao longo da execução da aplicação.
 
 Em seguida usamos a funcao Div do Dash que simplesmente permite configurarmos uma divisao HTML em nosso dashboard:
 
 ![image](https://user-images.githubusercontent.com/79231882/203083202-6ad679e2-7178-4411-a564-b08314fbf2ca.png)
+
 
 Em seguida fazemos o mesmo para configuracao da secao do layout:
 ![image](https://user-images.githubusercontent.com/79231882/203083294-f6779a4e-bcb3-4686-be0f-023094237112.png)
@@ -134,7 +150,7 @@ Importamos o dash, criamos uma instancia do dash, chamada de app, colocamos o pa
 ![image](https://user-images.githubusercontent.com/79231882/203083643-c5541017-917c-4df2-8c09-6be8b95d9f2d.png)
 
 
-Construcao das paginas da aplicacao
+# Construcao das paginas da aplicacao
 
 Vamos construir a pagina dashboard:
 
@@ -154,7 +170,7 @@ Inicialmente vamos tentar executar a funcao (laco “try”), se ocorrer um erro
 ![image](https://user-images.githubusercontent.com/79231882/203083967-a2d3caa2-aa4c-4aa9-97cd-6396773d40c3.png)
 
 
-Vamos criar agora um container a partir do modulo dbc (dash bootstrap components).
+# Vamos criar agora um container a partir do modulo dbc (dash bootstrap components).
 
 Utilizaremos isso para termos responsividade na aplicacao (layout se ajusta ao tamanho da janela do browser):
 ![image](https://user-images.githubusercontent.com/79231882/203084152-0947ced8-de81-4b19-b4ef-66c1df3cbda4.png)
@@ -176,6 +192,7 @@ E seguida definimos as duas linhas do container em que:
 Criamos o laco “except” para caso o enlace do Container apresente algum erro:
 
 ![image](https://user-images.githubusercontent.com/79231882/203084393-0d7ab07f-5910-44c5-9c49-1b8387e744f1.png)
+
 
 **Vamos a pagina overview**
 
