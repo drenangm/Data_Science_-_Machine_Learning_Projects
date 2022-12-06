@@ -1,5 +1,5 @@
-# construindo_classificador_naive_bayes
-Building a Naive-Bayes classifier from the scratch
+# Building a Naive-Bayes classifier from the scratch
+
 
 # Teorema de Bayes
 
