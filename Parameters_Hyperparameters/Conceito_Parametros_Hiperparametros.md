@@ -1,4 +1,4 @@
-# Parametros_vs_Hiperparametros
+# Parametros vs Hiperparametros
 
 Breve explicação da diferença entre Parâmetros e Hiperparâmetros
 
@@ -31,9 +31,11 @@ Parte do nosso trabalho como Cientistas de Dados é encontrar a melhor combinaç
 
 Em Métodos Ensemble esse trabalho é ainda mais complexo, pois temos os hiperparâmetros do estimador base e os hiperparâmetros do modelo ensemble, conforme este exemplo abaixo:
 
+
 - Estimador base:
 
 estim_base = KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski', metric_params=None, n_jobs=None, n_neighbors=5, p=2, weights='uniform')
+
 
 - Modelo Ensemble:
 
