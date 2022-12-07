@@ -2,7 +2,7 @@
 
 # Definindo o diretório de trabalho
 getwd()
-setwd("C:/MyBkp/Cursos/DSA/DSA_Formacao_Cientista_Dados/Curso04_Machine-Learning/Cap08/1-Cap08-R")
+setwd("C:..\YOUR_PATH/YOUR_FILE_NAME-R")
 
 # Calculando a entropia de duas classes
 -0.60 * log2(0.60) - 0.40 * log2(0.40)
