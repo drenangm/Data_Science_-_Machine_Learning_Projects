@@ -1,4 +1,4 @@
-# Estudo de Caso 2 - Construindo Um Modelo de Decisão Para Risco de Crédito
+# Construindo Um Modelo de Decisão Para Risco de Crédito
 
 # Definindo o diretório de trabalho
 getwd()
