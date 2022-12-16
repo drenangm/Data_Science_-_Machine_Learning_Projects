@@ -11,6 +11,6 @@ Mas temos (ou podemos ter) diversas variáveis de entrada, certo? Isso significa
 
 E se reduzíssemos a dimensionalidade dos dados para que pudéssemos criar um gráfico de duas dimensões independente da quantidade de variáveis em nosso dataset? Lindo, não? Podemos usar PCA (Análise de Componentes Principais), uma das principais técnicas para redução de dimensionalidade. Perfeito. Mais um problema resolvido.
 
-Tem outro problema (isso é o que nós fazemos: resolvemos problemas). Para desenvolver o PCA a partir do zero também temos que montar toda a estrutura matemática por trás do PCA, o que implica calcular as matrizes de co-variância e correlação, a fim de encontrar autovalores e autovetores.
+Tem outro problema. Para desenvolver o PCA a partir do zero também temos que montar toda a estrutura matemática por trás do PCA, o que implica calcular as matrizes de co-variância e correlação, a fim de encontrar autovalores e autovetores.
 
 
