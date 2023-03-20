@@ -6,7 +6,7 @@ Using historical data from the Ethereum quotation, we will try to predict the qu
 The data was obtained from the source below:
 
 
-<b>[https://ethereuprice.org/](https://ethereumprice.org/)</b>
+<b>https://ethereumprice.org/</b>
 
 
 The data are attached but can also be extracted from this source.
